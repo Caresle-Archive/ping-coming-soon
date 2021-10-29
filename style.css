@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+	--blue: hsl(223, 87%, 63%);
+	--pale-blue: hsl(223, 100%, 88%);
+	--light-red: hsl(354, 100%, 66%);
+	--gray: hsl(0, 0%, 59%);
+	--very-dark-blue: hsl(209, 33%, 12%);
+	--white: #fff;
+	--height-input: 48px;
+	--font-light: 300;
+	--font-semi-bold: 600;
+	--font-bold: 700;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Libre Franklin', sans-serif;
+}
+
+html, body {
+	margin: 0;
+	font-size: 20px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h2 {
+	font-weight: var(--font-light);
+	color: var(--gray);
+}
+
+h2 strong {
+	color: var(--very-dark-blue);
+}
+
+p {
+	font-size: .8rem;
+	font-weight: var(--font-light);
+	color: var(--very-dark-blue);
+	display: flex;
+}
+
+form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input, .btn-form {
+	width: 80%;
+	height: var(--height-input);
+	border-radius: calc(var(--height-input) * .5);
+}
+
+input {
+	appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	border: 1px solid var(--blue);
+	padding: 4px;
+	text-indent: 1rem;
+}
+
+.logo {
+	margin-top: 5rem;
+}
+
+.copy {
+	color: var(--gray);
+	font-size: .8rem;
+	margin: 1rem auto;
+}
+
+.btn-form {
+	background-color: var(--blue);
+	color: var(--white);
+	font-size: 1rem;
+	font-weight: var(--font-semi-bold);
+	border: 1px solid var(--blue);
+	margin: 1rem auto;
+	box-shadow: 0 3px 8px 4px var(--pale-blue);
+}
+
+.main-img {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.social-container {
+	display: flex;
+	justify-content: center;
+}
+
+.btn-round {
+	border: 1px solid var(--pale-blue);
+	border-radius: 50%;
+	width: 64px;
+	height: 64px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto .35rem;
+}
+
+.icon {
+	width: 32px;
+	height: 32px;
+}
