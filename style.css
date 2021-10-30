@@ -52,6 +52,14 @@ form {
 	align-items: center;
 }
 
+form > div {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 input, .btn-form {
 	width: 80%;
 	height: var(--height-input);
@@ -74,6 +82,10 @@ input {
 .text-error {
 	color: var(--light-red);
 	font-size: .85rem;
+}
+
+.text-center {
+	text-align: center;
 }
 
 .logo {
@@ -143,6 +155,14 @@ input {
 	fill: var(--white);
 }
 
+.error-show-1 {
+	margin-bottom: 3rem;
+}
+
+.error-show-2 {
+	margin-bottom: 2rem;
+}
+
 @media only screen and (min-width: 1024px) {
 	main {
 		width: 80%;
@@ -152,6 +172,10 @@ input {
 	form {
 		width: 90%;
 		flex-direction: row;
+	}
+
+	form > div {
+		width: 90%;
 	}
 
 	.btn-form {
@@ -173,6 +197,10 @@ input {
 	form {
 		width: 90%;
 		flex-direction: row;
+	}
+
+	form > div {
+		width: 80%;
 	}
 
 	.btn-form {

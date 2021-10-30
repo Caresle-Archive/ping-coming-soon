@@ -1,22 +1,32 @@
 const form = document.getElementById("email-form")
+const div = document.querySelector('.text-error')
+const button = document.querySelector('.btn-form')
 
 form.addEventListener('submit', e => {
 	e.preventDefault()
-	const email = document.getElementById("email").value
+	const inputEmail = document.getElementById("email")
+	const email = inputEmail.value
 	if (email === '') {
-		createMessage("Whoops! It looks like you forgot to add your email")
+		createMessage("Whoops! It looks like you forgot to add your email", 1)
 		return
 	}
 	const valid = validateEmail(email)
 	if (!valid) {
-		createMessage("Please provide a valid email address")
+		createMessage("Please provide a valid email address", 2)
 		return
 	}
+	div.innerHTML = ""
 
-	if (form.childElementCount >= 3) {
-		form.removeChild(form.childNodes[3])
-		form.firstElementChild.classList.remove('input-error')
+	if(button.classList.contains("error-show-1")) {
+		button.classList.remove("error-show-1")
+	} else if (button.classList.contains("error-show-2")) {
+		button.classList.remove("error-show-2")
 	}
+
+	if(inputEmail.classList.contains('input-error')) {
+		inputEmail.classList.remove('input-error')
+	}
+	
 })
 
 function validateEmail(email) {
@@ -24,14 +34,14 @@ function validateEmail(email) {
 	return re.test(email)
 }
 
-function createMessage(message) {
-	const childCount = form.childElementCount
-	if (childCount >= 3) {
-		form.removeChild(form.childNodes[3])
+function createMessage(message, btnClass) {
+	
+	const email = document.getElementById('email')
+	if (btnClass === 1) {
+		button.classList.add('error-show-1')
+	} else {
+		button.classList.add('error-show-2')
 	}
-	form.firstElementChild.classList.add('input-error')
-	const div = document.createElement('div')
-	div.classList.add('text-error')
 	div.innerHTML = message
-	form.insertBefore(div, form.lastElementChild)
+	email.classList.add('input-error')
 }
