@@ -67,6 +67,15 @@ input {
 	text-indent: 1rem;
 }
 
+.input-error {
+	border: 1px solid var(--light-red);
+}
+
+.text-error {
+	color: var(--light-red);
+	font-size: .85rem;
+}
+
 .logo {
 	margin-top: 5rem;
 }
@@ -85,6 +94,12 @@ input {
 	border: 1px solid var(--blue);
 	margin: 1rem auto;
 	box-shadow: 0 3px 8px 4px var(--pale-blue);
+	cursor: pointer;
+	transition: filter .1s ease-in;
+}
+
+.btn-form:hover {
+	filter: brightness(125%);
 }
 
 .main-img {
@@ -106,9 +121,63 @@ input {
 	justify-content: center;
 	align-items: center;
 	margin: auto .35rem;
+	cursor: pointer;
+	transition: background-color .25s ease-in;
 }
 
 .icon {
-	width: 32px;
-	height: 32px;
+	font-size: 1rem;
+	color: var(--blue);
+}
+
+.btn-round:hover > .icon {
+	color: var(--white);
+}
+
+.btn-round:hover {
+	border: 1px solid var(--blue);
+	background-color: var(--blue);
+}
+
+.icon:hover {
+	fill: var(--white);
+}
+
+@media only screen and (min-width: 1024px) {
+	main {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	form {
+		width: 90%;
+		flex-direction: row;
+	}
+
+	.btn-form {
+		width: 30%;
+		margin-left: 1rem;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	html, body {
+		font-size: 24px;
+	}
+	
+	main {
+		width: calc(1440px * .5);
+		margin: 0 auto;
+	}
+
+	form {
+		width: 90%;
+		flex-direction: row;
+	}
+
+	.btn-form {
+		width: 30%;
+		margin-left: 1rem;
+		font-size: 20px;
+	}
 }
