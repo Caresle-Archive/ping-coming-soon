@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Github Pages](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/html-css-js-B6iqZJ8rH)
+- Live Site URL: [Github Pages](https://caresle.github.io/ping-coming-soon/)
 
 ## My process
 
